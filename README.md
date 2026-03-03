@@ -11,7 +11,7 @@
 
 ## Installation
 
-1.  Download the latest release.
+1.  Download Fnote.zip and extract the files.
 2.  Run `setup.cmd`. 
 3.  The setup will:
     * Copy files to the target directory.
