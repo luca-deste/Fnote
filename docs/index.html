@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fnote - Ultra-fast note-taking for Windows</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --accent2: #3fb950;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
+        p { margin-bottom: 1rem; color: var(--muted); }
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #238636;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        .btn:hover { opacity: 0.85; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .feature {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.2rem;
+        }
+        .feature h4 { margin-bottom: 0.4rem; font-size: 1rem; }
+        .feature p { font-size: 0.9rem; margin: 0; }
+        code {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.9em;
+        }
+        pre {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin: 1rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th { color: var(--accent); font-size: 0.85rem; }
+        td { font-size: 0.9rem; }
+        td:first-child code { white-space: nowrap; }
+        .footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .footer a { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <h1>⚡ Fnote</h1>
+    <p class="tagline">Ultra-fast note-taking for Windows. Python-powered, tag-based, with screenshot capture.</p>
+
+    <a href="https://github.com/luca-deste/fnote/releases/latest" class="btn">Download</a>
+    <a href="https://github.com/luca-deste/fnote" class="btn btn-outline">View on GitHub</a>
+
+    <h2>Features</h2>
+    <div class="features">
+        <div class="feature">
+            <h4>⚡ Instant Notes</h4>
+            <p>Press <code>Ctrl+Alt+N</code>, type your note, hit Enter. It's saved.</p>
+        </div>
+        <div class="feature">
+            <h4>🏷️ Tags & Aliases</h4>
+            <p>Use <code>/work</code> in your notes. Aliases like <code>/w</code> work too.</p>
+        </div>
+        <div class="feature">
+            <h4>🤖 Auto-tagging</h4>
+            <p>Regex rules tag notes automatically based on content.</p>
+        </div>
+        <div class="feature">
+            <h4>📷 Screenshots</h4>
+            <p>Capture screen areas and attach them to notes. Paste from clipboard.</p>
+        </div>
+        <div class="feature">
+            <h4>🔍 Viewer</h4>
+            <p>Browse, search, filter by tag/date, edit, and delete notes.</p>
+        </div>
+        <div class="feature">
+            <h4>💻 Local & Portable</h4>
+            <p>SQLite database, no cloud. Runs from a USB stick.</p>
+        </div>
+    </div>
+
+    <h2>Installation</h2>
+    <p>Download <code>Fnote.exe</code> from the <a href="https://github.com/luca-deste/fnote/releases">Releases page</a> and run it. No installation needed.</p>
+    <p>On first launch, it creates <code>config.ini</code> and a <code>data/</code> folder next to the executable.</p>
+
+    <h2>Shortcuts</h2>
+    <table>
+        <tr><th>Shortcut</th><th>Action</th></tr>
+        <tr><td><code>Ctrl+Alt+N</code></td><td>Open/close chat popup</td></tr>
+        <tr><td><code>Ctrl+Alt+M</code></td><td>Start screenshot capture</td></tr>
+        <tr><td><code>Ctrl+Alt+V</code></td><td>Open viewer</td></tr>
+        <tr><td><code>Ctrl+Alt+Q</code></td><td>Quit application</td></tr>
+        <tr><td><code>Enter</code></td><td>Save note (in chat)</td></tr>
+        <tr><td><code>Shift+Enter</code></td><td>New line in note</td></tr>
+        <tr><td><code>Esc</code></td><td>Close popup/viewer</td></tr>
+        <tr><td><code>Delete</code></td><td>Delete selected note</td></tr>
+        <tr><td><code>Ctrl+C</code></td><td>Copy note text</td></tr>
+        <tr><td><code>Ctrl+V</code></td><td>Paste image from clipboard</td></tr>
+    </table>
+
+    <h2>Configuration</h2>
+    <p>Edit <code>config.ini</code> to customize tags, colors, shortcuts, and auto-tagging rules:</p>
+    <pre><code>[tags]
+work = #FF5733
+personal = #33A8FF
+urgent = #FF0000
+idea = #FFD700
+
+[tag_aliases]
+w = work
+i = idea
+
+[auto_tags]
+urgent = \burgent\b|\bASAP\b|\bdeadline\b
+work = \bclient\b|\bmeeting\b|\bproject\b</code></pre>
+
+    <h2>Build from Source</h2>
+    <pre><code>git clone https://github.com/luca-deste/fnote.git
+cd fnote
+pip install -r requirements.txt
+python fnote.py
+
+# Build .exe
+python -m PyInstaller fnote.spec</code></pre>
+
+    <h2>License</h2>
+    <p>GNU General Public License v3.0 — free to use, modify, and share.</p>
+
+    <div class="footer">
+        <p>Made by <a href="https://blog.lucadeste.it">Luca D'Este</a> · <a href="https://github.com/luca-deste/fnote">GitHub</a></p>
+    </div>
+
+</body>
+</html>
